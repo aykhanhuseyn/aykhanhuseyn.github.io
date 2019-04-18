@@ -1,0 +1,16 @@
+body
+{
+    font-family: SamsungSharpSans, Arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+.constructText
+{
+    width: 250px;
+    margin: 250px auto 250px auto !important;
+    background: inherit;
+    color: #ffffff !important;
+    z-index: 1000;
+}
+
+.constructText > h3 { text-align: center !important; }
