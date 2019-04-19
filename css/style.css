@@ -1,6 +1,7 @@
 html, body
 {
     overflow: hidden !important;
+    position: relative;
 }
 
 body
