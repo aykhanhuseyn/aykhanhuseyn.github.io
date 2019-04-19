@@ -1,3 +1,8 @@
+html, body
+{
+    overflow: hidden !important;
+}
+
 body
 {
     font-family: SamsungSharpSans, Arial, sans-serif;
