@@ -2,6 +2,10 @@ body {
     background-image: linear-gradient(135deg, #2B7594 0%, #655900 100%);
     background-attachment: fixed;
     overflow: hidden !important;
+    -webkit-overflow: hidden !important;
+    -moz-overflow: hidden !important;
+    -o-overflow: hidden !important;
+    -ms-overflow: hidden !important;
 }
 
 #scene > li {
