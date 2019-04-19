@@ -2,7 +2,7 @@ html, body
 {
     overflow: hidden !important;
     position: relative;
-    height: 1500px;
+    height: 2000px !important;
 }
 
 body
