@@ -1,0 +1,44 @@
+body
+{
+    font-family: SamsungSharpSans, Arial, sans-serif;
+    font-size: 0.9rem;
+    background: #333333;
+}
+
+.main
+{
+    padding: 4rem 1rem 4rem 3rem;
+    width: 98%;
+    height: 100%;
+    max-width: 1275px;
+    max-height: 2100px;
+    background: white;
+    margin: 1rem auto;
+}
+
+div.main > header { width: 90%; margin: 1rem auto; }
+
+div.namePart > h1
+{
+    font-weight: 700;
+}
+
+div.namePart, div.contactPart 
+{
+    width: 50%;
+    float: left;
+}
+
+/*content*/
+
+div.content
+{
+    width: 90%;
+    margin: 1rem auto;
+}
+
+div.content > article { margin: 2rem 1rem  }
+
+article, p { text-align: justify }
+
+div.content h3 { text-align: center }
