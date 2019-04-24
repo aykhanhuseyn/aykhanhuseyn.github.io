@@ -30,7 +30,26 @@
     <link rel="stylesheet" href="css/osxdock.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="startTime()">
+
+<!-- Top Navigation bar -->
+<header>
+    <div class="header">
+        <div class="logo"><img src="img/apple-logo-black.png"></div>
+        <ul class="menubar">
+            <li>Home</li>
+            <li onclick="window.open('CurriculumVitae.html', '_blank');">Curriculum Vitae</li>
+            <li>Activities</li>
+            <li>About</li>
+        </ul>
+        <ul class="timeBar">
+            <li id="time">Time</li>
+            <li id="date">Date</li>
+            <li>&copy; Aykhan Huseyn <span id="year">2019</span></li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</header>
 
 <!-- Input control for site background is hidden for users -->
 <div class="slider-box d-none">
@@ -107,5 +126,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="js/bgAnime.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
