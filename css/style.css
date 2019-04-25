@@ -14,7 +14,7 @@ body
 .constructText
 {
     width: 250px;
-    margin: 250px auto 250px auto !important;
+    margin: 150px auto!important;
     background: inherit;
     color: #ffffff !important;
     z-index: 1000;
@@ -74,4 +74,51 @@ body
     list-style-type: none;
     float: right;
     margin: 0 15px;
+}
+
+/* timer styles starts here */
+
+.timerBlock {
+    position: fixed;
+    top: 250px;
+    bottom: 250px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.timer {
+    width: 900px;
+    height: 250px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border: 2px solid whitesmoke;
+    display: flex;
+    justify-content: space-around;
+}
+
+.timer > div {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 23px 0;
+    border: 2px solid antiquewhite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    padding: 2rem 3rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+div.timer > div > :first-child {
+    display: block;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+div.timer > div > :last-child {
+
 }
