@@ -1,5 +1,9 @@
+window.addEventListener('DOMContentLoaded', (event) => {
+    setTime();
+});
+
 function setTime() {
-    let today = new Date();
+    var today = new Date();
     let monthList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let y = today.getFullYear();
     let m = monthList[today.getMonth()];
@@ -26,10 +30,10 @@ const endDate = new Date("May 25, 2019 21:00:00").getTime();
 let x = setInterval(function() {
 
     // Get todays date and time
-    let now = new Date().getTime();
+    let today = new Date().getTime();
 
     // Find the distance between now and the count down date
-    let distance = endDate - now;
+    let distance = endDate - today;
 
     // Time calculations for days, hours, minutes and seconds
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -46,6 +50,6 @@ let x = setInterval(function() {
     // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
+        document.querySelector(".timer").innerHTML = "COUNTDOWN IS FINISHED";
     }
 }, 1000);
