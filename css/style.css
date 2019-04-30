@@ -13,14 +13,18 @@ body
 
 .constructText
 {
-    width: 250px;
-    margin: 150px auto!important;
+    width: 350px;
+    margin: 120px auto!important;
     background: inherit;
-    color: #ffffff !important;
     z-index: 1000;
 }
 
-.constructText > h3 { text-align: center !important; }
+.constructText > h3 {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center !important;
+}
 
 /* header */
 .header {
