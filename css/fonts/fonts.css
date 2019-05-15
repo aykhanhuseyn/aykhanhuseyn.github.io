@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'SamsungSharpSans';
   src: url('SamsungSharpSans.eot?#iefix') format('embedded-opentype'),  url('SamsungSharpSans.otf')  format('opentype'),
@@ -7,20 +6,18 @@
   font-style: normal;
 }
 
-
 @font-face {
     font-family: 'SamsungSharpSans-Bold';
     src: url('SamsungSharpSans-Bold.eot?#iefix') format('embedded-opentype'),  url('SamsungSharpSans-Bold.otf')  format('opentype'),
     url('SamsungSharpSans-Bold.woff') format('woff'), url('SamsungSharpSans-Bold.ttf')  format('truetype'), url('SamsungSharpSans-Bold.svg#SamsungSharpSans-Bold') format('svg');
     font-weight: 700;
-    font-style: normal;
+    font-style: bold;
 }
-
 
 @font-face {
     font-family: 'SamsungSharpSans-Medium';
     src: url('SamsungSharpSans-Medium.eot?#iefix') format('embedded-opentype'),  url('SamsungSharpSans-Medium.otf')  format('opentype'),
     url('SamsungSharpSans-Medium.woff') format('woff'), url('SamsungSharpSans-Medium.ttf')  format('truetype'), url('SamsungSharpSans-Medium.svg#SamsungSharpSans-Medium') format('svg');
     font-weight: 500;
-    font-style: normal;
+    font-style: medium;
 }

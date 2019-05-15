@@ -5,10 +5,12 @@ body
     background: #333333;
 }
 
+a, a:hover { color: #212529; text-decoration: underline; }
+
 .main
 {
     padding: 4rem 1rem 4rem 3rem;
-    width: 98%;
+    width: 68%;
     height: 100%;
     max-width: 1275px;
     max-height: 2100px;
@@ -20,7 +22,8 @@ div.main > header { width: 90%; margin: 1rem auto; }
 
 div.namePart > h1
 {
-    font-weight: 700;
+    font-family: SamsungSharpSans-Bold, serif;
+    letter-spacing: 2px;
 }
 
 div.namePart, div.contactPart 
@@ -42,3 +45,9 @@ div.content > article { margin: 2rem 1rem  }
 article, p { text-align: justify }
 
 div.content h3 { text-align: center }
+
+.sectHead {
+    color: #4a8e33;
+    font-family: SamsungSharpSans-Medium, serif;
+}
+

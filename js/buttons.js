@@ -30,10 +30,10 @@ document.onkeydown = function (e) {
             case 87: window.open("https://api.whatsapp.com/send?phone=994552171845&text=I want my own website!", "_blank"); //Press W to Open WhatsApp
         }
     } else
-    switch (code) {
-        case 82://Block Ctrl+R
-        case 83://Block Ctrl+S
-        case 87://Block Ctrl+W -- Not work in Chrome and new Firefox
-            prevention(e);
-    }
+    // switch (code) {
+    //     case 82://Block Ctrl+R
+    //     case 83://Block Ctrl+S
+    //     case 87://Block Ctrl+W -- Not work in Chrome and new Firefox
+    //         prevention(e);
+    // }
 };

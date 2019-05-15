@@ -1,0 +1,16 @@
+html, body {
+    cursor: url("arrow.cur"), default;
+}
+
+a {
+    cursor: url("hand.cur"), pointer;
+}
+
+abbr {
+    cursor: url("help.cur"), help;
+}
+
+::selection {
+    background: #2B7594;
+    color: #e7e7e7;
+}
