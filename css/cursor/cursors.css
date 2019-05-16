@@ -1,13 +1,25 @@
 html, body {
-    cursor: url("arrow.cur"), default;
+    cursor: url("arrow.cur"), default !important;
+    -moz-cursor: url("arrow.cur"), default !important;
+    -webkit-cursor: url("arrow.cur"), default !important;
+    -ms-cursor: url("arrow.cur"), default !important;
+    -o-cursor: url("arrow.cur"), default !important;
 }
 
 a {
-    cursor: url("hand.cur"), pointer;
+    cursor: url("hand.cur"), pointer !important;
+    -moz-cursor: url("hand.cur"), pointer !important;
+    -webkit-cursor: url("hand.cur"), pointer !important;
+    -ms-cursor: url("hand.cur"), pointer !important;
+    -o-cursor: url("hand.cur"), pointer !important;
 }
 
 abbr {
-    cursor: url("help.cur"), help;
+    cursor: url("help.cur"), help !important;
+    -moz-cursor: url("help.cur"), help !important;
+    -webkit-cursor: url("help.cur"), help !important;
+    -ms-cursor: url("help.cur"), help !important;
+    -o-cursor: url("help.cur"), help !important;
 }
 
 ::selection {
