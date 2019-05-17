@@ -30,6 +30,26 @@
     <link rel="stylesheet" href="css/cVitae.css">
 </head>
 <body>
+
+<div class="darken">
+    <label class="darkLabel" for="darkMode">Dark Mode</label>
+    <svg
+            onmouseover="labelShow();"
+            onmouseout="labelShow();"
+            id="darkMode"
+            width="50"
+            height="50"
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+        <path
+                class="sun"
+                d="M100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C77.6142 0 100 22.3858 100 50Z"
+                fill="#FFD600" />
+    </svg>
+</div>
+
+
 <div class="main">
 <header>
     <div class="namePart col-md-6 col-sm-12 my-3">
@@ -110,5 +130,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/anime.min.js"></script>
+<script src="js/darkMode.js"></script>
 </body>
 </html>

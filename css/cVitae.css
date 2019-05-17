@@ -1,11 +1,45 @@
+:root{
+    --bgBelow: #333333;
+    --bgBelowDark: #111111;
+    --bgAbove: rgb(222,222,222);
+    --bgAboveDark: rgb(22,22,22);
+    --href: #212529;
+    --hrefDark: rgb(222,253,134);
+    --head: #4a8e33;
+    --headDark: rgb(84,44,150);
+}
+
 body
 {
     font-family: SamsungSharpSans, Arial, sans-serif;
     font-size: 0.9rem;
-    background: #333333;
+    background: var(--bgBelow);
 }
 
-a, a:hover { color: #212529; text-decoration: underline; }
+div.darken{
+    position: absolute;
+    top: 1rem;
+    right: 7%;
+}
+label.darkLabel{
+    cursor: pointer;
+    display: none;
+    text-shadow: 1px 1px 2px #e8e8e8, 0 0 1em #e8e8e8, 0 0 0.1em #f8f8f8;
+    -webkit-text-shadow: 1px 1px 2px #e8e8e8, 0 0 1em #e8e8e8, 0 0 0.1em #f8f8f8;
+    -moz-text-shadow: 1px 1px 2px #e8e8e8, 0 0 1em #e8e8e8, 0 0 0.1em #f8f8f8;
+    -o-text-shadow: 1px 1px 2px #e8e8e8, 0 0 1em #e8e8e8, 0 0 0.1em #f8f8f8;
+    -ms-text-shadow: 1px 1px 2px #e8e8e8, 0 0 1em #e8e8e8, 0 0 0.1em #f8f8f8;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.darkRiver { display: inline !important; }
+
+svg#darkMode{cursor: pointer;}
+
+a, a:hover { color: var(--href); text-decoration: underline; }
 
 .main
 {
@@ -14,7 +48,7 @@ a, a:hover { color: #212529; text-decoration: underline; }
     height: 100%;
     max-width: 1275px;
     max-height: 2100px;
-    background: white;
+    background: var(--bgAbove);
     margin: 1rem auto;
 }
 
@@ -27,25 +61,13 @@ div.namePart > h1
 }
 
 div.namePart, div.contactPart 
-{
-    width: 50%;
-    float: left;
-}
+{ float: left; }
 
 /*content*/
-
-div.content
-{
-    width: 90%;
-    margin: 1rem auto;
-}
-
-div.content > article { margin: 2rem 1rem  }
-
-article, p { text-align: justify }
-
-div.content h3 { text-align: center }
-
+div.content { width: 90%; margin: 1rem auto; }
+div.content > article { margin: 2rem 0; }
+article, p { text-align: justify; }
+div.content h3 { text-align: center; }
 .sectHead {
     color: #4a8e33;
     font-family: SamsungSharpSans-Medium, serif;
