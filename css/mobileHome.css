@@ -2,7 +2,7 @@ div.network, div.battery, div.mobileDock, div.mobileHome, div.mobileTime { displ
 
 @media screen and ( max-width: 910px) {
 
-    html,body{overflow:hidden !important;}
+    html,body{overflow:hidden !important;position:relative;height:2000px !important;}
 
     header>div.header{background: transparent; color: #fefefe;}
     header>div.header>ul.menubar{display: none;}
@@ -14,11 +14,11 @@ div.network, div.battery, div.mobileDock, div.mobileHome, div.mobileTime { displ
     div.logo{color:#fefefe;padding:0 1px;}
 
     div#dockContainer{display:none;}
-    div.mobileHome{display:block;width:100%;height:calc(100vh - 20px);position:absolute;top:20px;}
-    div.homeIcons{width:56px;height:56px;margin:8px 10px;display:inline-block;text-align:center;}
-    div.homeIcons>a>img{width:58px;height:58px;border-radius:18%;}
+    div.mobileHome{display:block;width:100%;height:calc(100vh - 20px);position:absolute;top:20px;z-index:1002 !important;}
+    div.homeIcons{width:60px;height:60px;margin:8px 10px;display:inline-block;text-align:center;float:left;}
+    div.homeIcons>a>img{width:60px;height:60px;border-radius:18%;}
     div.homeIcons>span{font-size:10px;color:#e7e7e7;}
-    div.mobileDock{width:100%;height:72px;position:absolute;top:calc(100vh - 72px);background:rgb(34,34,34);background:rgba(34,34,34,0.75);display:flex;justify-content:space-evenly;}
+    div.mobileDock{width:100%;height:72px;position:absolute;top:calc(100vh - 72px);background:rgb(34,34,34);background:rgba(34,34,34,0.75);display:flex;justify-content:space-evenly;z-index:1002 !important;}
 
     .constructText {width:300px;margin:80px auto!important;}
     .constructText > h3 {font-weight:700;font-size:2rem;}

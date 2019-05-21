@@ -1,7 +1,10 @@
-
 window.addEventListener('DOMContentLoaded', (event) => {
     setTime();
     batteryManager();
+    marginCalculator();
+});
+window.addEventListener("onresize",function(){
+    marginCalculator();
 });
 
 function setTime() {
@@ -80,4 +83,27 @@ window.addEventListener("deviceorientation", function (e) {
 
 });
 
+function marginCalculator() {
+    let w = window.innerWidth;
+    let customMargin;
+    let homeIcons = document.querySelectorAll("div.homeIcons")
+    if (w > 330 && w <= 420) {
+        customMargin = ((w-320)/8)+10;
+        marginSetter(homeIcons,customMargin);
+    } else if (w > 420 && w <= 700) {
+        customMargin = ((w-480)/10)+10;
+        marginSetter(homeIcons,customMargin);
+    } else if (w > 700 && w <= 1000) {
+        customMargin = ((w-560)/14)+10;
+        marginSetter(homeIcons,customMargin);
+    }
+}
+function marginSetter(homeIcons,customMargin) {
+    for(let homeIcon of homeIcons){
+        homeIcon.style.marginRight = (customMargin + "px");
+        homeIcon.style.marginLeft = (customMargin + "px");
+        homeIcon.style.marginTop = ("10px");
+        homeIcon.style.marginBottom = ("10px");
+    }
+}
 // window.addEventListener("on")
