@@ -1,0 +1,32 @@
+div.network, div.battery, div.mobileDock, div.mobileHome, div.mobileTime { display: none; }
+
+@media screen and ( max-width: 910px) {
+
+    html,body{overflow:hidden !important;}
+
+    header>div.header{background: transparent; color: #fefefe;}
+    header>div.header>ul.menubar{display: none;}
+    div.header>div.network{display:inline;}
+    div.header>ul.timeBar{display:none}
+    div.header>div.mobileTime {display:block;width:40px;margin:-18px auto 0;}
+    div.header>div.battery {float:right; display:inline;}
+
+    div.logo{color:#fefefe;padding:0 1px;}
+
+    div#dockContainer{display:none;}
+    div.mobileHome{display:block;width:100%;height:calc(100vh - 20px);position:absolute;top:20px;}
+    div.homeIcons{width:56px;height:56px;margin:8px 10px;display:inline-block;text-align:center;}
+    div.homeIcons>a>img{width:58px;height:58px;border-radius:18%;}
+    div.homeIcons>span{font-size:10px;color:#e7e7e7;}
+    div.mobileDock{width:100%;height:72px;position:absolute;top:calc(100vh - 72px);background:rgb(34,34,34);background:rgba(34,34,34,0.75);display:flex;justify-content:space-evenly;}
+
+    .constructText {width:300px;margin:80px auto!important;}
+    .constructText > h3 {font-weight:700;font-size:2rem;}
+
+    .timerBlock {position:fixed;top:200px;bottom:250px;right:0;left:0;display:flex;justify-content:space-around;}
+    .timer{width:240px;height:240px;display:inline-block;}
+    .timer>div{display:inline-block;float:left;width:100px;height:100px;margin:9px;padding:15px 18px;}
+    div.timer>div>:first-child{font-size:2.5rem;}
+    div.timer>div>:last-child{font-size:0.6rem;margin-top:-50px;}
+
+}

@@ -47,7 +47,7 @@ a, a:hover { color: var(--href); text-decoration: underline; }
     width: 68%;
     height: 100%;
     max-width: 1275px;
-    max-height: 2100px;
+    max-height: 2600px;
     background: var(--bgAbove);
     margin: 1rem auto;
 }
@@ -57,7 +57,8 @@ div.main > header { width: 90%; margin: 1rem auto; }
 div.namePart > h1
 {
     font-family: SamsungSharpSans-Bold, serif;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
+    font-size: 3rem;
 }
 
 div.namePart, div.contactPart 

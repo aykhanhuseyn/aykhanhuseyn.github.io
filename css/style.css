@@ -50,6 +50,7 @@ body
     cursor: pointer;
     display: inline-block;
     float: left;
+    color: #0e0e0e;
 }
 
 .logo > img {
