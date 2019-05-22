@@ -7,6 +7,7 @@ div.network, div.battery, div.mobileDock, div.mobileHome, div.mobileTime { displ
     header>div.header{background: transparent; color: #fefefe;}
     header>div.header>ul.menubar{display: none;}
     div.header>div.network{display:inline;}
+    /*div.network>li*/
     div.header>ul.timeBar{display:none}
     div.header>div.mobileTime {display:block;width:40px;margin:-18px auto 0;}
     div.header>div.battery {float:right; display:inline;}

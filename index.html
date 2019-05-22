@@ -15,14 +15,14 @@
           content="web, web developer, Frontend, Backend, HTML5, CSS3, Javascript, EcmaScript6, Bootstrap4, jQuery, Fontawesome5, C#, C#7, C#8, ASP.NET Core, .Net">
     <meta name="description"
           content="Web developer, using HTML5 technology with CSS3, ES6(JS), Bootstrap4, jQuery, Fontawesome5, C#, ASP.NET.">
-    <meta name="revised" content="Aykhan Huseyn, 18/5/2019">
+    <meta name="revised" content="Aykhan Huseyn, 23/5/2019">
     <meta name="robot" content="index, follow">
     <!--<meta property="fb:app_id" content="1234567890">-->
     <meta property="og:title" content="Aykhan Huseyn">
     <meta property="og:type" content="Website">
     <meta property="og:url" content="http://aykhanhuseyn.github.io/">
     <meta property="og:image"
-          content="https://scontent-sea1-1.xx.fbcdn.net/hphotos-xap1/t39.2178-6/851565_496755187057665_544240989_n.jpg">
+          content="img/ogImage.jpg">
     <meta property="og:description" content="Web developer, using HTML5 technology with CSS3 and ES6(JS).">
     <title>Aykhan Huseyn</title>
     <link rel="shortcut icon" href="img/hacolorfull_0_5x_NJ2_icon.ico" type="image/x-icon">
@@ -34,17 +34,31 @@
           href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="css/fonts/fonts.css">
     <link rel="stylesheet" href="css/cursor/cursors.css">
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="css/bgStyle.css">
-    <link rel="stylesheet" href="css/osxdock.css">
+    <link rel="stylesheet" href="css/OSXDock.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobileHome.css">
 </head>
 <body onload="startTime()">
 
 <!-- Top Navigation bar -->
+<div id="loadingScreen">
+    <div class="loadingSection">
+        <i class="fab fa-apple"></i>
+        <span>Loading</span>
+        <span class="l-1"></span>
+        <span class="l-2"></span>
+        <span class="l-3"></span>
+        <span class="l-4"></span>
+        <span class="l-5"></span>
+        <span class="l-6"></span>
+    </div>
+</div>
+
 <header>
     <div class="header">
-        <div class="network"><i>III</i></div>
+        <div class="network"><img alt="Network" src="img/fakeNet.png" style="width:13px;"></div>
         <div class="logo"><i class="fab fa-apple"></i></div>
         <ul class="menubar">
             <li onclick="window.open('index.html', '_self');">Home</li>

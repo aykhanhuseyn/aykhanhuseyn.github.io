@@ -1,11 +1,15 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+let overlay = document.getElementById("loadingScreen");
+let dustingDiv = function(){overlay.style.display = 'none'};
+window.addEventListener('load', function(){
+    overlay.classList.add("disappear");
+    setTimeout( dustingDiv,2000 );
+});
+window.addEventListener('DOMContentLoaded', function() {
     setTime();
     batteryManager();
     marginCalculator();
 });
-window.addEventListener("onresize",function(){
-    marginCalculator();
-});
+window.addEventListener("onresize",function(){ marginCalculator(); });
 
 function setTime() {
     var today = new Date();
@@ -77,10 +81,8 @@ function batteryManager() {
     }, 500);
 }
 
-window.addEventListener("deviceorientation", function (e) {
-    if(e.gamma>80){alert("+90")}
-    if(e.gamma<-80){alert("-90")}
-
+window.addEventListener("orientationchange", function (e) {
+    console.log(e.screen.angle);
 });
 
 function marginCalculator() {
