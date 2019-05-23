@@ -56,7 +56,7 @@ div.main > header { width: 90%; margin: 1rem auto; }
 
 div.namePart > h1
 {
-    font-family: SamsungSharpSans-Bold, serif;
+    font-weight: bold;
     letter-spacing: 4px;
     font-size: 3rem;
 }
@@ -71,7 +71,7 @@ article, p { text-align: justify; }
 div.content h3 { text-align: center; }
 .sectHead {
     color: #4a8e33;
-    font-family: SamsungSharpSans-Medium, serif;
+    font-weight: medium;
 }
 
 @media only screen and (max-width: 600px) {
