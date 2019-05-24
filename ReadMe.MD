@@ -1,8 +1,11 @@
-##Aykhan Huseyn
+Aykhan Huseyn
+======
+
 ![](./img/ogImage.jpg "Aykhan Huseyn")
 
 
-###Sources:
+Sources:
+----
 
 - [Background Animation](https://codepen.io/matthewwilliams/pen/Qbzmzr). 
 - [Mac OS Dock](https://fivera.net/create-mac-style-dock-menu-css-example/).
