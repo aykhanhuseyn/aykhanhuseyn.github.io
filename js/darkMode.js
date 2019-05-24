@@ -37,6 +37,7 @@ darkMode.addEventListener("click", () => {
             color: dark ? "#212529" : "rgb(222,253,134)"
         }, "-= 700");
 
+    document.querySelector("label.darkLabel").innerText = dark?"Dark Mode":"Light Mode";
     dark = !dark;
 });
 
