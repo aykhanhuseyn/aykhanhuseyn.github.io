@@ -1,14 +1,11 @@
 .disappear{
-    -webkit-animation: opacityDesc 2s ease-in-out;
-    -o-animation: opacityDesc 2s ease-in-out;
-    animation: opacityDesc 2s ease-in-out;
+    -webkit-animation: opacityDesc 1s ease-in-out;
+    -o-animation: opacityDesc 1s ease-in-out;
+    animation: opacityDesc 1s ease-in-out;
 }
 @-webkit-keyframes opacityDesc {
     0% {
         opacity: 1;
-    }
-    80% {
-        opacity: 0.7;
     }
     100% {
         opacity: 0;
@@ -17,9 +14,6 @@
 @-moz-keyframes opacityDesc {
     0% {
         opacity: 1;
-    }
-    80% {
-        opacity: 0.5;
     }
     100% {
         opacity: 0;

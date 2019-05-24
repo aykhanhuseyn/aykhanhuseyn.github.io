@@ -2,7 +2,7 @@ let overlay = document.getElementById("loadingScreen");
 let dustingDiv = function(){overlay.style.display = 'none'};
 window.addEventListener('load', function(){
     overlay.classList.add("disappear");
-    setTimeout( dustingDiv,2000 );
+    setTimeout( dustingDiv,1000 );
 });
 window.addEventListener('DOMContentLoaded', function() {
     setTime();
