@@ -5,9 +5,9 @@ div.network, div.battery, div.mobileDock, div.mobileHome, div.mobileTime { displ
     html,body{overflow:hidden !important;position:relative;height:100vh !important;}
 
     header>div.header{background: transparent; color: #fefefe;}
-    header>div.header>ul.menubar{display: none;}
-    div.header>div.network{display:inline;}
-    /*div.network>li*/
+    header>div.header>ul.menubar{display:none;}
+    div.header>div.network{display:inline-block;}
+    div.network>svg{transform: translate(3px,-1px);}
     div.header>ul.timeBar{display:none}
     div.header>div.mobileTime {display:block;width:40px;margin:-18px auto 0;}
     div.header>div.battery {float:right; display:inline;}
