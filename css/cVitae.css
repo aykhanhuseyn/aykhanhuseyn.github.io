@@ -58,7 +58,14 @@ div.namePart > h1
 {
     font-weight: bold;
     letter-spacing: 4px;
-    font-size: 3rem;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    transform: translateY(-10px);
+}
+div.namePart>h1::selection {
+    background: none !important;
+    color: #212529;
+    text-shadow: 5px 5px 0 #2B7594 !important;
 }
 
 div.namePart, div.contactPart 
