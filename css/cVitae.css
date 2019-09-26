@@ -60,7 +60,8 @@ div.namePart > h1
     letter-spacing: 4px;
     font-size: 4.5rem;
     text-transform: uppercase;
-    transform: translateY(-10px);
+    line-height: 70px;
+    margin: 0 !important;
 }
 div.namePart>h1::selection {
     background: none !important;
