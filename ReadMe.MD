@@ -24,6 +24,10 @@ You can download it from
 I have used cursor style called "[Numix](https://github.com/numixproject/numix-cursor-theme)" in my site. 
 You can download it from [here](https://www.deviantart.com/alexgal23/art/Numix-Cursors-631491782) and install it.
 
+### Icons 
+The icons which I have used are called "[Devicons](https://konpa.github.io/devicon/)". 
+You can use it as font as you used Fontawesome or something else. Or if you dont want to use additional css file or link, you can use SVG versions of them. Thanks to [Julien Monty (aka Konpa)](https://github.com/konpa).
+
 ### Dark mode SVG morph
 For animation in dark mode button (Sun transforming to Moon) 
 I have used [Animate JS](https://animejs.com/). You can find a lot of 
