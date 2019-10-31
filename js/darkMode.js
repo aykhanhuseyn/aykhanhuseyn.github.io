@@ -53,17 +53,12 @@ function turnDarkOn() {
     : 'Light Mode';
   dark = dark ? false : true;
   setCookie('color', dark ? 'dark' : 'light', 60);
-  console.log('turnDarkOn finished');
 }
 
-//darkMode.addEventListener('click', turnDarkOn());
-
-//////////////////////////
 function labelShow() {
   console.log('labelShow');
   document.querySelector('.darkLabel').classList.toggle('darkRiver');
 }
-//////////////////////////
 
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
@@ -92,14 +87,15 @@ console.log('onload');
 let darkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 if (getCookie('color') !== '') {
-  console.log('color cookie empty');
   if (darkModeOn) {
-    console.log('os dark mode on');
     turnDarkOn();
-    setCookie('color', 'dark', 60);
+  } else {
+    dark = true;
+    turnDarkOn();
   }
 } else if (getCookie('color') === 'dark') {
-  console.log('cookie dark mode on');
   turnDarkOn();
-  setCookie('color', 'dark', 60);
+} else if (getCookie('color') === 'light') {
+  dark = true;
+  turnDarkOn();
 }
