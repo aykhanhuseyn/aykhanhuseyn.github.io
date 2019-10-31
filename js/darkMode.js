@@ -7,12 +7,12 @@ const moonPath =
 const darkMode = document.querySelector('#darkMode');
 let dark = false;
 
-function turnDarkOn(dark) {
-  const timeLine = anime.timeline({
-    duration: 750,
-    easing: 'easeOutExpo'
-  });
+const timeLine = anime.timeline({
+  duration: 750,
+  easing: 'easeOutExpo'
+});
 
+function turnDarkOn() {
   timeLine
     .add({
       targets: '.sun',
@@ -51,12 +51,55 @@ function turnDarkOn(dark) {
   document.querySelector('label.darkLabel').innerText = dark
     ? 'Dark Mode'
     : 'Light Mode';
-  dark = !dark;
+  dark = dark ? false : true;
+  setCookie('color', dark ? 'dark' : 'light', 60);
+  console.log('turnDarkOn finished');
 }
 
-darkMode.addEventListener('click', turnDarkOn(dark));
+//darkMode.addEventListener('click', turnDarkOn());
 
 //////////////////////////
 function labelShow() {
+  console.log('labelShow');
   document.querySelector('.darkLabel').classList.toggle('darkRiver');
+}
+//////////////////////////
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = 'expires=' + d.toUTCString();
+  document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+  console.log('set cookie');
+}
+function getCookie(cname) {
+  var name = cname + '=';
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  console.log('get cookie');
+  return '';
+}
+
+console.log('onload');
+let darkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (getCookie('color') !== '') {
+  console.log('color cookie empty');
+  if (darkModeOn) {
+    console.log('os dark mode on');
+    turnDarkOn();
+    setCookie('color', 'dark', 60);
+  }
+} else if (getCookie('color') === 'dark') {
+  console.log('cookie dark mode on');
+  turnDarkOn();
+  setCookie('color', 'dark', 60);
 }
