@@ -12,19 +12,32 @@ const timeLine = anime.timeline({
   easing: 'easeOutExpo'
 });
 
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = 'expires=' + d.toUTCString();
+  document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+}
+function getCookie(cname) {
+  var name = cname + '=';
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return '';
+}
 function turnDarkOn() {
   timeLine
     .add({
       targets: '.sun',
       d: [{ value: dark ? sunPath : moonPath }]
     })
-    .add(
-      {
-        targets: '#darkMode',
-        rotate: dark ? -320 : 320
-      },
-      '-= 350'
-    )
     .add(
       {
         targets: '.main',
@@ -57,37 +70,15 @@ function turnDarkOn() {
 function labelShow() {
   document.querySelector('.darkLabel').classList.toggle('darkRiver');
 }
-function setCookie(cname, cvalue, exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-  var expires = 'expires=' + d.toUTCString();
-  document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
-}
-function getCookie(cname) {
-  var name = cname + '=';
-  var ca = document.cookie.split(';');
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return '';
-}
 
 const darkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const lightModeOn = window.matchMedia('(prefers-color-scheme: light)').matches;
-const notSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches;
-const notSupported = !darkModeOn && !lightModeOn && !notSpecified;
 
+//This section checkes cookie and os preferences and applies modes
 if (getCookie('color') !== '') {
   if (darkModeOn) {
     dark = false;
     turnDarkOn();
-  } else if (lightModeOn || notSpecified || notSupported) {
+  } else {
     dark = true;
     turnDarkOn();
   }
@@ -99,9 +90,26 @@ if (getCookie('color') !== '') {
   turnDarkOn();
 }
 
+//This section listens window.matchMedia change events and applies moon/sun pathes
 window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
-  e.matches && (dark = false && turnDarkOn());
+  e.matches &&
+    (dark =
+      true &&
+      setCookie('color', 'dark', 60) &&
+      (document.querySelector('label.darkLabel').innerText = 'Dark Mode') &&
+      timeLine.add({
+        targets: '.sun',
+        d: [{ value: moonPath }]
+      }));
 });
 window.matchMedia('(prefers-color-scheme: light)').addListener(e => {
-  e.matches && (dark = true && turnDarkOn());
+  e.matches &&
+    (dark =
+      false &&
+      setCookie('color', 'light', 60) &&
+      (document.querySelector('label.darkLabel').innerText = 'Light Mode') &&
+      timeLine.add({
+        targets: '.sun',
+        d: [{ value: sunPath }]
+      }));
 });

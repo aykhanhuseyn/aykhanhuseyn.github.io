@@ -5,29 +5,24 @@ window.onload = () => {
     navigator.serviceWorker.register('./sw.js');
   }
 
+  //This section checks if css applied mark mode, then applies dark mode moon and text to DOM
+  const timeDark = anime.timeline({
+    duration: 850,
+    easing: 'easeOutExpo'
+  });
   if (darkModeOn) {
-    timeLine
-      .add({
-        targets: '.sun',
-        d: [{ value: moonPath }]
-      })
-      .add({
-        targets: '#darkMode',
-        rotate: 320
-      });
+    timeDark.add({
+      targets: '.sun',
+      d: [{ value: moonPath }]
+    });
     document.querySelector('label.darkLabel').innerText = 'Dark Mode';
     dark = true;
     setCookie('color', 'dark', 60);
-  } else if (lightModeOn || notSpecified || notSupported) {
-    timeLine
-      .add({
-        targets: '.sun',
-        d: [{ value: sunPath }]
-      })
-      .add({
-        targets: '#darkMode',
-        rotate: -320
-      });
+  } else {
+    timeDark.add({
+      targets: '.sun',
+      d: [{ value: sunPath }]
+    });
     document.querySelector('label.darkLabel').innerText = 'Light Mode';
     dark = false;
     setCookie('color', 'light', 60);
