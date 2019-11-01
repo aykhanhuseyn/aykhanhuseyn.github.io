@@ -79,16 +79,15 @@ function getCookie(cname) {
 }
 
 const darkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const lightModeOn = window.matchMedia("(prefers-color-scheme: light)").matches;
-const notSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches;
-const notSupported = !isDarkMode && !isLightMode && !isNotSpecified;
-
+const lightModeOn = window.matchMedia('(prefers-color-scheme: light)').matches;
+const notSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches;
+const notSupported = !darkModeOn && !isLightMode && !isNotSpecified;
 
 if (getCookie('color') !== '') {
   if (darkModeOn) {
     dark = false;
     turnDarkOn();
-  } else if(lightModeOn || notSpecified || notSupported) {
+  } else if (lightModeOn || notSpecified || notSupported) {
     dark = true;
     turnDarkOn();
   }
@@ -100,15 +99,9 @@ if (getCookie('color') !== '') {
   turnDarkOn();
 }
 
-window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
-  e.matches && ( 
-    dark=false && 
-    turnDarkOn() 
-    );
+window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+  e.matches && (dark = false && turnDarkOn());
 });
-window.matchMedia("(prefers-color-scheme: light)").addListener(e => {
-  e.matches && ( 
-    dark=true &&
-    turnDarkOn()
-    );
+window.matchMedia('(prefers-color-scheme: light)').addListener(e => {
+  e.matches && (dark = true && turnDarkOn());
 });
