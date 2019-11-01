@@ -81,7 +81,7 @@ function getCookie(cname) {
 const darkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const lightModeOn = window.matchMedia('(prefers-color-scheme: light)').matches;
 const notSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches;
-const notSupported = !darkModeOn && !isLightMode && !isNotSpecified;
+const notSupported = !darkModeOn && !lightModeOn && !notSpecified;
 
 if (getCookie('color') !== '') {
   if (darkModeOn) {
