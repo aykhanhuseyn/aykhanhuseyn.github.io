@@ -54,18 +54,14 @@ function turnDarkOn() {
   dark = dark ? false : true;
   setCookie('color', dark ? 'dark' : 'light', 60);
 }
-
 function labelShow() {
-  console.log('labelShow');
   document.querySelector('.darkLabel').classList.toggle('darkRiver');
 }
-
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   var expires = 'expires=' + d.toUTCString();
   document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
-  console.log('set cookie');
 }
 function getCookie(cname) {
   var name = cname + '=';
@@ -79,23 +75,40 @@ function getCookie(cname) {
       return c.substring(name.length, c.length);
     }
   }
-  console.log('get cookie');
   return '';
 }
 
-console.log('onload');
-let darkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const darkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const lightModeOn = window.matchMedia("(prefers-color-scheme: light)").matches;
+const notSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches;
+const notSupported = !isDarkMode && !isLightMode && !isNotSpecified;
+
 
 if (getCookie('color') !== '') {
   if (darkModeOn) {
+    dark = false;
     turnDarkOn();
-  } else {
+  } else if(lightModeOn || notSpecified || notSupported) {
     dark = true;
     turnDarkOn();
   }
 } else if (getCookie('color') === 'dark') {
+  dark = false;
   turnDarkOn();
 } else if (getCookie('color') === 'light') {
   dark = true;
   turnDarkOn();
 }
+
+window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
+  e.matches && ( 
+    dark=false && 
+    turnDarkOn() 
+    );
+});
+window.matchMedia("(prefers-color-scheme: light)").addListener(e => {
+  e.matches && ( 
+    dark=true &&
+    turnDarkOn()
+    );
+});

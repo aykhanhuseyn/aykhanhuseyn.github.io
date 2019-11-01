@@ -1,10 +1,11 @@
-var cacheName = 'AykhanHuseyn-v1.3.2';
+var cacheName = 'AykhanHuseyn-v1.3.5';
 var filesToCache = [
   '/',
   '/CurriculumVitae.html',
   '/css/fonts.css',
   '/css/cursors.css',
   '/css/cVitae.css',
+  '/css/prefers.css',
   '/js/anime.min.js',
   '/js/darkMode.js',
   '/js/main.js'
