@@ -64,8 +64,13 @@ function turnDarkOn() {
   document.querySelector('label.darkLabel').innerText = dark
     ? 'Dark Mode'
     : 'Light Mode';
-  dark = dark ? false : true;
-  setCookie('color', dark ? 'dark' : 'light', 60);
+  if (dark) {
+    dark = false;
+    setCookie('color', 'light', 60);
+  } else {
+    dark = true;
+    setCookie('color', 'dark', 60);
+  }
 }
 function labelShow() {
   document.querySelector('.darkLabel').classList.toggle('darkRiver');
@@ -74,20 +79,43 @@ function labelShow() {
 const darkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 //This section checkes cookie and os preferences and applies modes
-if (getCookie('color') !== '') {
+
+if (getCookie('color') === 'dark') {
   if (darkModeOn) {
+    timeLine.add({
+      targets: '.sun',
+      d: [{ value: moonPath }]
+    });
+    document.querySelector('label.darkLabel').innerText = 'Light Mode';
+    dark = true;
+    setCookie('color', 'dark', 60);
+  } else {
     dark = false;
     turnDarkOn();
-  } else {
+  }
+} else if (getCookie('color') === 'light') {
+  if (darkModeOn) {
     dark = true;
     turnDarkOn();
+  } else {
+    timeDark.add({
+      targets: '.sun',
+      d: [{ value: sunPath }]
+    });
+    document.querySelector('label.darkLabel').innerText = 'Dark Mode';
+    dark = false;
+    setCookie('color', 'light', 60);
   }
-} else if (getCookie('color') === 'dark') {
-  dark = false;
-  turnDarkOn();
-} else if (getCookie('color') === 'light') {
-  dark = true;
-  turnDarkOn();
+} else {
+  if (darkModeOn) {
+    timeLine.add({
+      targets: '.sun',
+      d: [{ value: moonPath }]
+    });
+    document.querySelector('label.darkLabel').innerText = 'Light Mode';
+    dark = true;
+    setCookie('color', 'dark', 60);
+  }
 }
 
 //This section listens window.matchMedia change events and applies moon/sun pathes
