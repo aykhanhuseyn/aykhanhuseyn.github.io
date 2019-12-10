@@ -1,4 +1,4 @@
-var cacheName = 'AykhanHuseyn-v1.3.15';
+var cacheName = 'AykhanHuseyn-v1.4.0';
 var filesToCache = [
   '/',
   '/CurriculumVitae.html',
