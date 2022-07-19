@@ -1,25 +1,23 @@
 @media (prefers-color-scheme: light) {
-  .main {
-    background: rgb(222, 222, 222);
-    color: rgb(22, 22, 22);
-  }
-  body {
-    background: #333333;
-  }
-  a {
-    color: #212529;
+  :root {
+    --bgBelow: #333333;
+    --bgAbove: #dedede;
+    --text: #161616;
+    --href: #212529;
+    --head: #4a8e33;
+    --textSelection: #212529;
+    --textSelectionShadow: #2b7594;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .main {
-    background: rgb(22, 22, 22);
-    color: rgb(222, 222, 222);
-  }
-  body {
-    background: #111111;
-  }
-  a {
-    color: rgb(222, 253, 134);
+  :root {
+    --bgBelow: #111111;
+    --bgAbove: #161616;
+    --text: #dedede;
+    --href: #defd86;
+    --head: #f300ff;
+    --textSelection: #defd86;
+    --textSelectionShadow: #2b7594;
   }
 }

@@ -16,14 +16,14 @@
     <meta name="author" content="Aykhan Huseyn" />
     <meta
       name="keywords"
-      content="web, web developer, Frontend, Backend, HTML5, CSS3, Javascript, EcmaScript6, Bootstrap4, jQuery, Fontawesome5, C#, C#7, C#8, ASP.NET Core, .Net"
+      content="react developer, nextjs developer, web developer, frontend, backend, HTML5, CSS3, JavaScript, EcmaScript6, Bootstrap4, jQuery, Fontawesome5, C#, C#7, C#8, ASP.NET Core, .Net"
     />
     <meta
       name="description"
-      content="Web developer, using HTML5 technology with CSS3, ES6(JS), Bootstrap4, jQuery, Fontawesome5, C#, ASP.NET."
+      content="Web developer, using React, Redux, RTK, RTK Query, CSS3, SCSS, ES6(JS), AntDesign, MaterialUI, Bootstrap, jQuery, lodash"
     />
     <meta name="robot" content="index, follow" />
-    <meta property="og:title" content="Curriculum Vitae - Aykhan Huseyn" />
+    <meta property="og:title" content="Aykhan Huseyn's CV" />
     <meta property="og:type" content="Website" />
     <meta
       property="og:url"
@@ -32,10 +32,10 @@
     <meta property="og:image" content="img/ogImage.jpg" />
     <meta
       property="og:description"
-      content="Web developer, using HTML5 technology with CSS3 and ES6(JS)."
+      content="Web developer, using React, Redux, RTK, RTK Query, CSS3, SCSS."
     />
 
-    <title>Curriculum Vitae - Aykhan Huseyn</title>
+    <title>Aykhan Huseyn's CV</title>
 
     <link
       rel="shortcut icon"
@@ -56,34 +56,14 @@
 
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="white" />
+    <meta name="background-color" content="white" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="Hello World" />
+    <meta name="apple-mobile-web-app-title" content="Aykhan's CV" />
     <meta name="msapplication-TileImage" content="img/HA_color_180.png" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
   </head>
   <body>
-    <div class="darken">
-      <label class="darkLabel" for="darkMode">Dark Mode</label>
-      <svg
-        onmouseover="labelShow();"
-        onmouseout="labelShow();"
-        onclick="turnDarkOn();"
-        id="darkMode"
-        width="50"
-        height="50"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          class="sun"
-          d="M100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C77.6142 0 100 22.3858 100 50Z"
-          fill="#FFD600"
-        />
-      </svg>
-    </div>
-
     <div class="main">
       <header>
         <div class="namePart col-lg-6 col-md-12 mb-3">
@@ -93,7 +73,7 @@
         <div class="contactPart col-lg-6 col-md-12">
           <p class="d-inline-block col-4 float-left">Phone:</p>
           <p class="d-inline-block col-8">
-            <a href="tel: +994513335462">+994513335462</a>
+            <a href="tel: +994552171845">+994552171845</a>
           </p>
           <p class="d-inline-block col-4 float-left">Email:</p>
           <p class="d-inline-block col-8">
@@ -121,15 +101,17 @@
       <div class="content">
         <article class="col-12">
           <h3 class="sectHead">Summary</h3>
-          I’m 24 years old web developer having skills at HTML, CSS, JavaScript,
-          Typescript, jQuery, Bootstrap, React, Redux, MobX, C#, WinForm, Bunifu
-          Framework, PHP, Yii2 Framework, T-SQL, MySQL and SQLite. I have
-          studied at Code Academy in software development. In addition, I have 6
-          years experience in PhotoShop and 2 years experience in Illustrator. I
-          have put my LinkedIn and Github account links above for more
-          information about my works. Traveling and taking pictures of nature
-          are among my hobbies. It's honor to say that I am a
-          <a href="http://www.scout.az">Scout</a>.
+          <p class="paragraph">
+            I’m <span id="age">24</span> years old web developer having skills at 
+            HTML, CSS, JavaScript, Typescript, React, Redux, Next and so on. Also 
+            I've experience with Ant design, MaterialUI, Bootstrap, Tailwind, MobX, 
+            C#, WinForm, Bunifu Framework, PHP, Yii2 Framework, T-SQL, MySQL and 
+            SQLite. I have studied at Code Academy in software development. In 
+            addition, I have some experience in Photoshop, Illustrator and Figma 
+            design applications. I have put my LinkedIn and Github account links 
+            above for more information about my works. Traveling and taking pictures 
+            of nature are among my hobbies. It's honor to say that I am a <a href="http://www.scout.az">Scout</a>.
+          </p>
         </article>
         <div class="detailed">
           <div class="education col-lg-8 col-md-12 float-left">
@@ -141,7 +123,7 @@
                   >Code Academy</a
                 >
               </h5>
-              <p>
+              <p class="paragraph">
                 It is the place where I gained most experience in my life. I
                 have learned HTML5, CSS3, ES6, Bootstrap4, jQuery3, C#, WinForm,
                 ASP.Net, .Net MVC framework and Web Services technologies and
@@ -157,7 +139,7 @@
                   >Kapital Bank OJSC</a
                 >
               </h5>
-              <p>
+              <p class="paragraph">
                 Great teams have always been exciting for me. I am feeling happy
                 to be part of this team. We are developing applications in React
                 using Typescript, which is my best discovery ever. Also we use
@@ -169,7 +151,7 @@
                 Full stack web developer in
                 <a href="https://idealand.az/" target="_blank">Idealand</a>
               </h5>
-              <p>
+              <p class="paragraph">
                 This job gave me a true experience with PHP Yii2 framework and
                 WordPress, and MySQL. It is very interesting to me to learn new
                 technologies outside of my knowledge area.
@@ -178,7 +160,7 @@
             <h3 class="sectHead">Activities</h3>
             <article>
               <h5>Elite Shoppy</h5>
-              <p>
+              <p class="paragraph">
                 Elite Shoppy is final project of our team for front-end. You can
                 view this page by clicking
                 <a
@@ -191,7 +173,7 @@
             <h3 class="sectHead">Achievements</h3>
             <article>
               <h5>Intellectual games</h5>
-              <p>
+              <p class="paragraph">
                 First place in
                 <a href="https://az.wikipedia.org/wiki/Breyn-rinq">Brain Ring</a
                 >,
@@ -210,7 +192,7 @@
             </article>
             <article>
               <h5>Startup and Stock-brokering Competitions</h5>
-              <p>
+              <p class="paragraph">
                 Second place in
                 <a
                   href="https://www.ozyegin.edu.tr/tr/events/50016622"
@@ -433,8 +415,7 @@
     </div>
 
     <!-- JavaScript Codes start here -->
-    <script src="js/anime.min.js"></script>
-    <script src="js/darkMode.js"></script>
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js'></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,9 +1,13 @@
 window.onload = () => {
-  'use strict';
+  "use strict";
 
-  year.innerText = (new Date()).getFullYear();
+  const YEAR = 1000 * 60 * 60 * 24 * 365.25;
+  const BIRTH_DATE = new Date("1995-03-21");
 
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js');
+  year.innerText = new Date().getFullYear();
+  age.innerText = parseInt((new Date() - BIRTH_DATE) / YEAR);
+
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js");
   }
 };
